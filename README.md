@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Project generation
 This project was create with the following command using the angular CLI
-`ng g new rentabike -S --prefix=rab --style=scss`
+`ng new rentabike -S --prefix=rab --style=scss`
 
 ## Development server
 
