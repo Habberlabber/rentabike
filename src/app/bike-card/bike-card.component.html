@@ -1,0 +1,17 @@
+<div class="Box" [class.gray]="!bike.availableCount">
+  <div class="Box-header">
+    <h3 class="Box-title">
+      {{bike.title}}
+    </h3>
+  </div>
+  <div class="Box-body">
+    <div class="order-confirmation text-green" *ngIf="showConfirmation">
+      Your booking has been registered!
+    </div>
+    <img [src]="bike.image" [alt]="bike.title">
+  </div>
+  <div class="Box-footer">
+    <button class="btn btn-primary" type="button" (click)="bookBike()" [disabled]="!bike.availableCount">Book this bike</button>
+    <rab-availability [availableCount]="bike.availableCount"></rab-availability>
+  </div>
+</div>

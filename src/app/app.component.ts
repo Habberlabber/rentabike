@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DemoData } from './demo-data';
 
 @Component({
   selector: 'rab-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'rentabike';
+  bikesList;
+  constructor(private data:DemoData){
+    this.bikesList = data.bikesList;
+  }
+
 }

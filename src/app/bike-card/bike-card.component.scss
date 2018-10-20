@@ -1,0 +1,23 @@
+div.Box {
+  width: 400px;
+  margin-bottom: 2rem;
+
+  &.gray {
+    opacity: .5;
+    cursor: not-allowed;
+  }
+
+  .Box-body {
+    text-align: center;
+    img {
+      max-width: 100%;
+      max-width: 300px;
+    }
+  }
+
+  .Box-footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 1rem
+  }
+}
