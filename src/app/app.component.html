@@ -2,6 +2,13 @@
 <main>
 
   <div class="bike-list">
+    <!-- 
+      The *ngFor="" syntax is used as a for of loop, to generate an element for each item in an array. 
+      In this case we make a bike-card component for each itme in the bikesList array.
+      We also declare a varaible called bike, wich contains the value of the array item.
+
+      This variable is then passed to the component as an Input called bike using the [] syntax.
+     -->
     <rab-bike-card *ngFor="let bike of bikesList" [bike]="bike"></rab-bike-card>
   </div>
 

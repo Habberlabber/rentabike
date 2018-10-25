@@ -1,3 +1,9 @@
+<!-- 
+  Angular have several ways of conditionally adding classes.
+  On div.box we conditionaly add the .gray class if the statement in the atribute is correct. 
+  when Angular detects changes on bike.availableCount it will now check if the statement (!bike.availableCount)
+  is true, and then add the .gray class.
+-->
 <div class="Box" [class.gray]="!bike.availableCount">
   <div class="Box-header">
     <h3 class="Box-title">
@@ -5,13 +11,36 @@
     </h3>
   </div>
   <div class="Box-body">
+    <!-- 
+      The  *ngIf syntax lets angular know that this html element should only be rendered
+      if the condition in the attribute value is true. 
+
+      In this example we show a message confirming the booking is registered.
+      By default the showConfirmation variable is false, but when the user clicks the book button
+      The variable is shanged to ture. 
+     -->
     <div class="order-confirmation text-green" *ngIf="showConfirmation">
       Your booking has been registered!
     </div>
+    <!-- 
+      If the value of any standard html attribute should be based on a variable
+      we need to use square bracket[] around the attribute name.
+      This lets angualr know to evaluate the attribute value as an variable.
+      Angualr will also update the attributes when it detects changes.
+     -->
     <img [src]="bike.image" [alt]="bike.title">
   </div>
   <div class="Box-footer">
+    <!-- 
+      Above we use [] to tell angualr to fill the attribute value with content, and update it when there es changes.
+      On the button below we use () to let angular listen for the click event on the button, and then run the function.
+     -->
     <button class="btn btn-primary" type="button" (click)="bookBike()" [disabled]="!bike.availableCount">Book this bike</button>
+    <!-- 
+      Below we again use [] to let angualr know to do seomthing when change is detected. 
+      In this example angular will update the availableCount Input variable on the availability component
+      with the value of bike.availableCount.
+     -->
     <rab-availability [availableCount]="bike.availableCount"></rab-availability>
   </div>
 </div>
