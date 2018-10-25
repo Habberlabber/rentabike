@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.1.
 
 ## Project generation
-This project was create with the following command using the angular CLI
+This project was generated with the following command using the angular CLI
 `ng new rentabike -S --prefix=rab --style=scss`
 
 ## Development server
